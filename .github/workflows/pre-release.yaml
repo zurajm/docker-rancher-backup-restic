@@ -3,6 +3,7 @@ name: CI Pre Release
 on:
   push:
     tags:
+    # Target all branches
       - '^[0-9].+'
 
 jobs:
