@@ -93,7 +93,7 @@ user-cron:
   environment:
     DOCKER_API_VERSION: "1.22"
 scheduled-backup:
-  image: zurajm/rancher-backup-restic:latest
+  image: zurajm/rancher-backup-restic:0.10.0-v0.18
   command:
   - "backup"
   volumes:
