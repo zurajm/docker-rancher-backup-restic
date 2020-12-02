@@ -7,7 +7,8 @@ RUN wget -O /tmp/restic_0.10.0_linux_amd64.bz2 https://github.com/restic/restic/
     && chmod +x /usr/bin/restic
 
 ADD rancher.sh /usr/bin
-COPY *.crt /etc/ssl/certs
+COPY certs/*.crt /etc/ssl/certs/
+RUN rm /etc/ssl/certs/dummy.crt
 
 ENV RANCHER_CONTAINER_NAME=rancher
 ENV RESTORE_SNAPSHOT=latest
